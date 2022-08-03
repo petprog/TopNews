@@ -1,38 +1,36 @@
 import dependencies.AnnotationProcessorsDependencies
 import dependencies.Dependencies
-import extensions.kapt
 
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("commons.android-library")
 }
 
 android {
-    compileSdk = 32
-
     defaultConfig {
-        minSdk = 21
-        targetSdk = 32
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        buildConfigField("String", "DATABASE_NAME", "\"news-data\"")
+        buildConfigField("int", "DATABASE_VERSION", "1")
+        buildConfigField("boolean", "DATABASE_EXPORT_SCHEMA", "false")
+        buildConfigField(
+            type = "String",
+            name = "API_KEY",
+            value = com.android.build.gradle.internal.cxx.configure.gradleLocalProperties(rootDir).getProperty("api_key") as? String ?: throw Exception("api_key is not set at local.properties")
+        )
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+    flavorDimensions += "environment"
+    productFlavors {
+        create("production") {
+            dimension = "environment"
+            buildConfigField("String", "API_BASE_URL", "\"https://newsapi.org/\"")
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+        create("staging") {
+            dimension = "environment"
+            buildConfigField("String", "API_BASE_URL", "\"https://newsapi.org/\"")
+        }
+        create("dev") {
+            dimension = "environment"
+            buildConfigField("String", "API_BASE_URL", "\"https://newsapi.org/\"")
+        }
     }
 }
 
