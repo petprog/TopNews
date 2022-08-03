@@ -1,11 +1,3 @@
-/*
- * Created by Yogi Dewansyah
- * URL: https://github.com/yodeput
- * Copyright (c) 2022 . All rights reserved.
- * Last modified 2/17/22, 3:03 PM
- *
- */
-
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
@@ -28,6 +20,7 @@ allprojects {
         mavenCentral()
         maven("https://jitpack.io")
     }
+
 }
 
 tasks.register("clean", Delete::class) {

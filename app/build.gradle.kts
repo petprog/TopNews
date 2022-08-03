@@ -1,18 +1,9 @@
-/*
- * Created by Yogi Dewansyah
- * URL: https://github.com/yodeput
- * Copyright (c) 2022 . All rights reserved.
- * Last modified 2/23/22, 10:28 PM
- *
- */
-
 import BuildAndroidConfig.TEST_INSTRUMENTATION_RUNNER
 import dependencies.AnnotationProcessorsDependencies
 import dependencies.Dependencies
 import extensions.addTestsDependencies
 import extensions.implementation
 import extensions.kapt
-
 plugins {
     id(BuildPlugins.ANDROID_APPLICATION)
     id(BuildPlugins.KOTLIN_ANDROID)
@@ -80,17 +71,32 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = BuildDependenciesVersions.COMPOSE
+    }
 }
 
 dependencies {
-    implementation(project(BuildModules.FEATURE_LIST))
+    api(Dependencies.APPCOMPAT)
+    api(Dependencies.CORE_KTX)
+    api(Dependencies.TIMBER)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.HILT)
+    implementation(Dependencies.ACTIVITY_COMPOSE)
+    implementation(Dependencies.COMPOSE_MATERIAL)
+    implementation(Dependencies.COMPOSE_UI)
+    implementation(Dependencies.COMPOSE_UI_TOOLING)
+    implementation(Dependencies.COMPOSE_MATERIAL_3)
+    implementation(Dependencies.ACC_UI_CONTROLLER)
     implementation(Dependencies.ROOM_KTX)
     implementation(Dependencies.ROOM_RUNTIME)
     implementation(Dependencies.STARTUP)
     kapt(AnnotationProcessorsDependencies.HILT)
+    kapt(Dependencies.HILT)
     kapt(AnnotationProcessorsDependencies.ROOM)
     addTestsDependencies()
 }
