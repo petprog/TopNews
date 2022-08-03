@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-package com.yodeput.newsapp.core.mapper
-
 import com.demoapp.petprog.common.util.ErrorCode
 import com.skydoves.sandwich.ApiErrorModelMapper
 import com.skydoves.sandwich.ApiResponse
