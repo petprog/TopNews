@@ -1,6 +1,5 @@
 package com.demoapp.petprog.core.di
 
-import NewsRepository
 import com.demoapp.petprog.core.dao.NewsDao
 import com.demoapp.petprog.core.network.NewsService
 import com.demoapp.petprog.common.base.RepositoryI
