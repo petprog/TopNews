@@ -1,2 +1,4 @@
 rootProject.name = "TopNews"
 include ':app'
+include ':common'
+include ':core'
