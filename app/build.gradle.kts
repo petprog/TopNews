@@ -82,26 +82,29 @@ android {
 dependencies {
 
     api(project(BuildModules.COMMON))
-
-    api(Dependencies.APPCOMPAT)
-    api(Dependencies.CORE_KTX)
-    api(Dependencies.TIMBER)
+    api(project(BuildModules.CORE))
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
     implementation(Dependencies.NAVIGATION_COMPOSE)
     implementation(Dependencies.HILT)
     implementation(Dependencies.ACTIVITY_COMPOSE)
     implementation(Dependencies.COMPOSE_MATERIAL)
+    implementation(Dependencies.COMPOSE_MATERIAL_ICON)
+    implementation(Dependencies.COMPOSE_CONSTRAIN_LAYOUT)
     implementation(Dependencies.COMPOSE_UI)
     implementation(Dependencies.COMPOSE_UI_TOOLING)
-
     implementation(Dependencies.COMPOSE_MATERIAL_3)
     implementation(Dependencies.ACC_UI_CONTROLLER)
-    implementation(Dependencies.ROOM_KTX)
-    implementation(Dependencies.ROOM_RUNTIME)
-    implementation(Dependencies.STARTUP)
     kapt(AnnotationProcessorsDependencies.HILT)
     kapt(Dependencies.HILT)
     kapt(AnnotationProcessorsDependencies.ROOM)
+
+    implementation(Dependencies.COIL)
+    implementation(Dependencies.ACC_SWIPE_REFRESH)
+    implementation(Dependencies.ACC_PLACEHOLDER)
+    implementation(Dependencies.SKYDOVES)
+    implementation(Dependencies.IMG_COIL)
+    implementation(Dependencies.CHROME_CUSTOM_TAB)
+
     addTestsDependencies()
 }
