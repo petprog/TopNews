@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TopNews</string>
+    <string name="app_name">Newsfeed</string>
+    <string name="top_news_text">Top News</string>
 </resources>
