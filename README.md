@@ -4,9 +4,9 @@ Modular Android architecture which showcase Kotlin, MVVM, Navigation, Hilt, Coro
 ## Screenshots
 
 <p style="background-color:rgb(169,169,169);">
-<img src="art/dark_one.jpg" alt="Login and Register" width = "400" >
-<img src="art/light_one.jpg" alt="Login and Register" width = "400" >
-<img src="art/browser_tab.jpg" alt="Login and Register" width = "400" >
+<img src="art/dark_one.jpg" alt="Login and Register" width = "200" >
+<img src="art/light_one.jpg" alt="Login and Register" width = "200" >
+<img src="art/browser_tab.jpg" alt="Login and Register" width = "200" >
 
 ## Features
 * Modular Android App Architecture.
