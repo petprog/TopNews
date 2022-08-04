@@ -1,3 +1,4 @@
+package com.demoapp.petprog.core.initializer
 
 import android.content.Context
 import androidx.startup.Initializer

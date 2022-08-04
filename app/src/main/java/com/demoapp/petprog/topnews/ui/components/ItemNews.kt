@@ -1,5 +1,6 @@
 package com.demoapp.petprog.topnews.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
@@ -57,6 +60,20 @@ fun ItemNews(
                     )
                     Box(
                         modifier = Modifier
+                            .height(200.dp)
+                            .fillMaxSize()
+                            .background(
+                                Brush.verticalGradient(
+                                    colors = listOf(
+                                        Color.Transparent,
+                                        Color.Black
+                                    )
+                                )
+                            )
+
+                    )
+                    Box(
+                        modifier = Modifier
                             .fillMaxSize()
                             .padding(4.dp),
                         contentAlignment = Alignment.BottomStart
@@ -65,29 +82,36 @@ fun ItemNews(
                         Column(Modifier.padding(5.dp)) {
                             Text(
                                 item.title!!,
+                                color = Color.White,
                                 style = MaterialTheme.typography.titleMedium,
                                 maxLines = 2,
                                 overflow = TextOverflow.Ellipsis
                             )
 
-                            Row(modifier = Modifier
-                                .padding(3.dp).fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                            Row(
+                                modifier = Modifier
+                                    .padding(3.dp)
+                                    .fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
                                 item.author?.let {
                                     Text(
                                         it,
-                                        style = MaterialTheme.typography.labelMedium.copy(color = MaterialTheme.colorScheme.outline)
+                                        color = Color.White,
+                                        style = MaterialTheme.typography.labelMedium
                                     )
                                 }
                                 Row {
                                     Icon(
                                         Icons.TwoTone.QueryBuilder, null,
-                                        tint = MaterialTheme.colorScheme.primary,
+                                        tint = Color.White,
                                         modifier = Modifier.size(14.dp)
                                     )
                                     Text(
                                         item.publishedTime,
+                                        color = Color.White,
                                         modifier = Modifier.padding(start = 3.dp),
-                                        style = MaterialTheme.typography.labelSmall.copy(color = MaterialTheme.colorScheme.outline)
+                                        style = MaterialTheme.typography.labelSmall
                                     )
                                 }
 

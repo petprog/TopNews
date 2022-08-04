@@ -106,5 +106,7 @@ dependencies {
     implementation(Dependencies.IMG_COIL)
     implementation(Dependencies.CHROME_CUSTOM_TAB)
 
+    implementation(Dependencies.STARTUP)
+
     addTestsDependencies()
 }

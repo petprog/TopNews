@@ -27,6 +27,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.demoapp.petprog.topnews.androidx-startup"
+            android:exported="false"
+            tools:replace="android:authorities"
+            tools:node="merge">
+
+            <meta-data
+                android:name="com.demoapp.petprog.core.initializer.TimberInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>
