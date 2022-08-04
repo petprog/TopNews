@@ -4,6 +4,7 @@
     package="com.demoapp.petprog.topnews">
 
     <application
+        android:name="com.demoapp.petprog.topnews.BaseApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
