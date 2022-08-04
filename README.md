@@ -17,7 +17,7 @@ Modular Android architecture which showcase Kotlin, MVVM, Navigation, Hilt, Coro
 
 ## Modules
 
-Modules are collection of source files and build settings that allow you to divide a project into discrete units of functionality. In this case apart from dividing by functionality/responsibility, existing the following dependence between them. The project is divided into 4 Modules :
+Modules are collection of source files and build settings that allow you to divide a project into discrete units of functionality. In this case apart from dividing by functionality/responsibility, existing the following dependence between them. The project is divided into 3 Modules :
 
 #### App module
 
@@ -39,9 +39,8 @@ Add parameters in the locale.properties file as shown in the example below.
 api_key="Your API Key"
 ```
 
-You can get an Api Key from [NEWS API ORG](https://newsapi.org/)
-
-1. use `apiKey = 2d021085c2e64c23927ff485d9f4299b`
+1. You can get an Api Key from [NEWS API ORG](https://newsapi.org/) OR
+ use `apiKey = 2d021085c2e64c23927ff485d9f4299b`
 2. Paste copied key into `local.properties` with parameter (`api_key`)
 
 
