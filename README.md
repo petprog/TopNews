@@ -1,4 +1,4 @@
-# Compose News
+# Top News
 Modular Android architecture which showcase Kotlin, MVVM, Navigation, Hilt, Coroutines, Jetpack Compose, Retrofit and Kotlin Gradle DSL.
 
 ## Screenshots
