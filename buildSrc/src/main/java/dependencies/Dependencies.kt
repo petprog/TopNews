@@ -49,5 +49,7 @@ object Dependencies {
 
     const val IMG_COIL = "com.github.skydoves:landscapist-coil:${BuildDependenciesVersions.SKYDOVES_LANDSCAPIST}"
 
+    const val CHROME_CUSTOM_TAB = "androidx.browser:browser:1.4.0"
+
 
 }
