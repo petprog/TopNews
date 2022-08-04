@@ -80,16 +80,21 @@ android {
 }
 
 dependencies {
+
+    api(project(BuildModules.COMMON))
+
     api(Dependencies.APPCOMPAT)
     api(Dependencies.CORE_KTX)
     api(Dependencies.TIMBER)
     implementation(Dependencies.NAVIGATION_FRAGMENT)
     implementation(Dependencies.NAVIGATION_UI)
+    implementation(Dependencies.NAVIGATION_COMPOSE)
     implementation(Dependencies.HILT)
     implementation(Dependencies.ACTIVITY_COMPOSE)
     implementation(Dependencies.COMPOSE_MATERIAL)
     implementation(Dependencies.COMPOSE_UI)
     implementation(Dependencies.COMPOSE_UI_TOOLING)
+
     implementation(Dependencies.COMPOSE_MATERIAL_3)
     implementation(Dependencies.ACC_UI_CONTROLLER)
     implementation(Dependencies.ROOM_KTX)
