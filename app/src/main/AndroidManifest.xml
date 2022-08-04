@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.demoapp.petprog.topnews">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="com.demoapp.petprog.topnews.BaseApplication"
         android:allowBackup="true"
@@ -15,7 +17,7 @@
         android:theme="@style/Theme.TopNews"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.demoapp.petprog.topnews.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.TopNews">
