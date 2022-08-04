@@ -1,4 +1,4 @@
-package com.demoapp.petprog.topnews.ui
+package com.demoapp.petprog.topnews.ui.screen
 
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.Animatable
