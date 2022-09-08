@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.demoapp.petprog.topnews.viewmodel.MainViewModel
 import com.demoapp.petprog.common.util.ViewStateStatus
 import com.demoapp.petprog.topnews.R
+import com.demoapp.petprog.topnews.ui.common.FailedToLoad
 import com.demoapp.petprog.topnews.ui.common.ShimmerNews
 import com.demoapp.petprog.topnews.ui.components.ListNews
 import com.demoapp.petprog.topnews.ui.components.Topbar
@@ -43,9 +44,12 @@ fun MainScreen (context: Context, viewModel: MainViewModel) {
                 viewModel.getHeadline(true)
             },
         ) {
-            Column() {
+            Column {
 
-                Box(Modifier.fillMaxWidth().padding(8.dp)) {
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp)) {
                     Text(
                         stringResource(id = R.string.top_news_text),
                         modifier = Modifier.align(Alignment.Center),
@@ -63,7 +67,9 @@ fun MainScreen (context: Context, viewModel: MainViewModel) {
                     is ViewStateStatus.Success -> {
                         ListNews(context = context, data = headlineState.data)
                     }
-                    is ViewStateStatus.Error -> {}
+                    is ViewStateStatus.Error -> {
+                        FailedToLoad()
+                    }
 
                 }
             }
