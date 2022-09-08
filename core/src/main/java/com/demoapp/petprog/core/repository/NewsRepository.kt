@@ -27,7 +27,7 @@ class NewsRepository @Inject constructor(
         Timber.d("Injection NewsRepository")
     }
 
-    fun fetchHeadline(): Flow<ViewStateStatus<List<News>>> = flow {
+    private fun fetchHeadline(): Flow<ViewStateStatus<List<News>>> = flow {
         val result = api.headline()
         result.suspendOnSuccess {
             data.articles!!.let {

@@ -28,6 +28,7 @@ import com.demoapp.petprog.topnews.ui.components.Topbar
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
